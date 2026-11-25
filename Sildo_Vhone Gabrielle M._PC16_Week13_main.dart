@@ -4,7 +4,6 @@ void main() {
   runApp(const LoginFigmaApp());
 }
 
-// Root Widget
 class LoginFigmaApp extends StatelessWidget {
   const LoginFigmaApp({super.key});
 
@@ -22,11 +21,9 @@ class LoginFigmaApp extends StatelessWidget {
   }
 }
 
-// Custom StatelessWidget matching Figma "3 - A - Log In"
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
 
-  // Colors extracted from your Figma screen
   static const Color darkBgColor = Color(0xFF212121);
   static const Color limeAccentColor = Color(0xFFDDF247);
   static const Color circleIconBg = Color(0xFF1A1A1A);
@@ -39,7 +36,6 @@ class LoginScreen extends StatelessWidget {
         backgroundColor: darkBgColor,
         elevation: 0,
         centerTitle: true,
-        // TIP: Change this text or color during Step 6 to demonstrate Hot Reload!
         title: const Text(
           'Log In',
           style: TextStyle(
@@ -54,7 +50,7 @@ class LoginScreen extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
-              // 1. Top "Welcome" Section
+
               Container(
                 padding: const EdgeInsets.only(top: 56.0, bottom: 32.0),
                 alignment: Alignment.center,
@@ -69,7 +65,6 @@ class LoginScreen extends StatelessWidget {
                 ),
               ),
 
-              // 2. Lime-Yellow Input Form Container
               Container(
                 width: double.infinity,
                 color: limeAccentColor,
@@ -80,7 +75,6 @@ class LoginScreen extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    // Username or email label
                     const Text(
                       'Username or email',
                       style: TextStyle(
@@ -91,7 +85,6 @@ class LoginScreen extends StatelessWidget {
                     ),
                     const SizedBox(height: 8),
 
-                    // Email Input Box (Static Container + Text)
                     Container(
                       width: double.infinity,
                       padding: const EdgeInsets.symmetric(
@@ -113,7 +106,6 @@ class LoginScreen extends StatelessWidget {
 
                     const SizedBox(height: 18),
 
-                    // Password label
                     const Text(
                       'Password',
                       style: TextStyle(
@@ -124,7 +116,6 @@ class LoginScreen extends StatelessWidget {
                     ),
                     const SizedBox(height: 8),
 
-                    // Password Input Box (Static Container + Text)
                     Container(
                       width: double.infinity,
                       padding: const EdgeInsets.symmetric(
@@ -147,7 +138,6 @@ class LoginScreen extends StatelessWidget {
 
                     const SizedBox(height: 12),
 
-                    // Right-aligned Forgot Password link
                     const Row(
                       mainAxisAlignment: MainAxisAlignment.end,
                       children: [
@@ -167,10 +157,8 @@ class LoginScreen extends StatelessWidget {
 
               const SizedBox(height: 28),
 
-              // 3. Bottom Action & Social Section
               Column(
                 children: [
-                  // Pill-shaped Log In Button
                   Container(
                     width: 190,
                     padding: const EdgeInsets.symmetric(vertical: 12.0),
@@ -192,7 +180,6 @@ class LoginScreen extends StatelessWidget {
 
                   const SizedBox(height: 14),
 
-                  // Create Account Text
                   const Text(
                     'Create Account',
                     style: TextStyle(
@@ -203,11 +190,9 @@ class LoginScreen extends StatelessWidget {
 
                   const SizedBox(height: 16),
 
-                  // Social Login Circles (Row)
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      // Browser / Google Circle
                       Container(
                         width: 48,
                         height: 48,
@@ -222,7 +207,6 @@ class LoginScreen extends StatelessWidget {
                         ),
                       ),
                       const SizedBox(width: 16),
-                      // Facebook Circle
                       Container(
                         width: 48,
                         height: 48,
